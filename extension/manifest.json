@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Answer Container Extractor",
+  "version": "1.0",
+  "description": "Extracts text from elements with class .answerContainer and sends to background script",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.perplexity.ai/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.perplexity.ai/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Answer Container Extractor"
+  }
+} 

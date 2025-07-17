@@ -1,0 +1,27 @@
+# Ignore Python env and cache
+__pycache__/
+*.pyc
+.venv/
+env/
+*.env
+
+# VSCode or IDE files
+.vscode/
+.idea/
+
+# Node modules
+node_modules/
+
+# Build files
+dist/
+build/
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
+
+# Local data files
+summaries.json
+
